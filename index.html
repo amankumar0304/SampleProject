@@ -1,0 +1,98 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="main.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+
+    <script>
+      function imgSlider(anything) {
+        document.querySelector(".iceCream").src = anything;
+      }
+      function changeBgColor(color) {
+        const sec = document.querySelector(".sec");
+        sec.style.background = color;
+      }
+      function menuToggle() {
+        const toggleMenu = document.querySelector(".toggleMenu");
+        const navigation = document.querySelector(".navigation");
+        toggleMenu.classList.toggle("active");
+        navigation.classList.toggle("active");
+      }
+    </script>
+  </head>
+  <body>
+    <section class="sec">
+      <header>
+        <a href="#"><img src="logo.png" class="logo" /></a>
+        <div class="toggleMenu" onclick="menuToggle()"></div>
+        <ul class="navigation">
+          <li><a href="#">Home</a></li>
+
+          <li><a href="#">Products</a></li>
+          <li><a href="#">What's New</a></li>
+          <li><a href="#">Newsletter</a></li>
+
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </header>
+
+      <div class="content">
+        <div class="textBox">
+          <h2>That's What<br /><span>We do</span></h2>
+          <br />
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam
+            iste, velit deserunt facilis ducimus expedita reiciendis omnis!
+            Eveniet quam culpa cupiditate doloribus ipsum reiciendis facere
+            expedita, veritatis, impedit et harum?
+          </p>
+          <a href="#">View All Products</a>
+        </div>
+        <div class="imgBox">
+          <img
+            src="iceCream01.png"
+            style="max-height: 500px"
+            class="iceCream"
+          />
+        </div>
+      </div>
+      <ul class="thumb">
+        <li>
+          <img
+            src="iceCream01.png"
+            style="max-height: 500px"
+            onclick="imgSlider('iceCream01.png');changeBgColor('#fda4b4')"
+          />
+        </li>
+        <li>
+          <img
+            src="iceCream02.png"
+            style="max-height: 500px"
+            onclick="imgSlider('iceCream02.png');changeBgColor('#CC9966')"
+          />
+        </li>
+
+        <li>
+          <img
+            src="iceCream03.png"
+            style="max-height: 500px"
+            onclick="imgSlider('iceCream03.png');changeBgColor('#A997DF')"
+          />
+        </li>
+      </ul>
+      <ul class="sci">
+        <li>
+          <a href="#"><img src="facebook.png" /></a>
+        </li>
+
+        <li>
+          <a href="#"><img src="twitter.png" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="instagram.png" /></a>
+        </li>
+      </ul>
+    </section>
+  </body>
+</html>
